@@ -2,32 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+    body {
+      background-color: hsl(217, 54%, 11%);
+    }
+    .main {
+      background-color: hsl(216, 50%, 16%);
+      height: fit-content;
+      width: 270px;
+      margin: 20px auto;
+      margin-bottom: 5px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.411);
+    }
+    .main-image {
+      height: 270px;
+      background-color: lightblue;
+      border-radius: 5px;
+      background-image: url('images/image-equilibrium.jpg');
+      background-size: cover;
+    }
+    .main-image-blue{
+      background-color: hsl(178, 100%, 50%);
+      height: 270px;
+      border-radius: 5px;
+      opacity: 0.6;
+      visibility: hidden;
+    }
+    .main-image-blue-eye {
+      margin: 111px;
+    }
+    .main-h1, .main-p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1em;
+      margin: 25px 0;
+    }
+    .main-h1 {
+      font-size: 1.2em;
+      color: white;
+    }
+    .main-p {
+      color: hsl(215, 51%, 70%);
+    }
+    .main-div-price {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 0;
+    }
+    .main-div-price-div {
+      display: flex;
+      height: 20px;
+      align-items: center;
+      gap: 10px;
+    }
+    .main-perfil {
+      display: flex;
+      height: 42px;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid hsl(215, 32%, 27%);
+      padding-top: 15px;
+    }
+    .main-perfil-img {
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 100%;
+    }
+    #main-p-price {
+      color: hsl(178, 100%, 50%);
+      font-weight: 700;
+    }
+    #main-p-time {
+      color: hsl(215, 51%, 70%);
+    }
+    .strong {
+      color: white;
+      font-weight: 300;
+    }
+
+    /* HOVERS */
+    .main-a:hover .main-image-blue {
+      visibility: visible;
+    }
+    .main-h1:hover {
+      color: cyan;
+    }
+    .strong:hover {
+      color: cyan;
+    }
+
   </style>
 </head>
 <body>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+  <main class="main">
+    <a href="#" class="main-a">
+      <div class="main-image">
+        <div class="main-image-blue">
+          <img src="images/icon-view.svg" alt="view icon" class="main-image-blue-eye">
+        </div>
+      </div>
+    </a>
+    <a href="#" class="main-a">
+      <h1 class="main-h1">Equilibrium #3429</h1>
+    </a>
+    <p class="main-p">Our Equilibrium collection promotes balance and calm.</p>
+    <div class="main-div-price">
+      <div class="main-div-price-div">
+        <img src="images/icon-ethereum.svg" alt="ETHEREUM" class="main-div-p-div-img">
+        <p class="main-p" id="main-p-price">0.041 ETH</p>
+      </div>
+      <div class="main-div-price-div">
+        <img src="images/icon-clock.svg" alt="clock" class="main-div-p-div-img">
+        <p class="main-p" id="main-p-time">3 days left</p>
+      </div>
+    </div>
+    <div class="main-perfil">
+      <img src="images/image-avatar.png" alt="Jules Wyvern profile picture" class="main-perfil-img">
+      <p class="main-p">Creation of <a href="" class="main-perfil-a"><strong class="strong">Jules Wyvern</strong></a></p>
+    </div>
+  </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/TeffyyyyRachel">Stéphanie Rachel</a>.
   </div>
 </body>
 </html>
